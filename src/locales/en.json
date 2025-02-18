@@ -1,0 +1,10 @@
+{
+  "common": {
+    "label": {
+      "name": "Name"
+    },
+    "message": {
+      "hello": "Hello, {name}!"
+    }
+  }
+}

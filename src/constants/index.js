@@ -1,0 +1,1 @@
+export {default as CommonCodeType} from './CommonCode.type.js';

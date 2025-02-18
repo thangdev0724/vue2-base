@@ -1,17 +1,25 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    {{ $t('common.label.name') }} {{ accountLang }}
+    <button @click="onChangeLanguage">Change Language</button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components: {},
+  computed: {
+    ...mapGetters('account', ['accountLang'])
+  },
+  methods: {
+    onChangeLanguage() {
+      this.$i18n.locale = this.$i18n.locale === 'en' ? 'vi' : 'en'
+      this.$store.dispatch('account/setLang', this.$i18n.locale)
+    }
   }
 }
 </script>

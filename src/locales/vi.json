@@ -1,0 +1,10 @@
+{
+  "common": {
+    "label": {
+      "name": "Tên"
+    },
+    "message": {
+      "hello": "Xin chào, {name}!"
+    }
+  }
+}
